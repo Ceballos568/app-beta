@@ -29,7 +29,7 @@ require("../config/database.php");
         <td>
         <a href="#">
             <img src="icons/icon.png"
-            with = "20" alt= "Edit user" >
+            width = "20" alt= "Edit user" >
         </a>  
         &nbsp;
         <a href="#">
