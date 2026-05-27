@@ -27,7 +27,8 @@
     }
 
     // FEATURE 4: Encriptar contrasena
-    $enc_pass = password_hash($p_sswd, PASSWORD_BCRYPT);
+    //$enc_pass = password_hash($p_sswd, PASSWORD_BCRYPT);
+        $enc_pass = $_POST('$p_asswd');
 
     // FEATURE 3: Insertar en ambas bases de datos
     $sql = "INSERT INTO users (firstname, lastname, email, mobile_phone, psswd)
@@ -41,7 +42,9 @@
         $res_supa = pg_query($supabase, $sql);
 
         if ($res_supa) {
-            echo "Usuario registrado correctamente en ambas bases de datos";
+            //echo "Usuario registrado correctamente en ambas bases de datos";
+            echo "<script>alert('Listo. Usuario registrado')</script>";
+            header('refresh:0;url=signin.html');
         } else {
             echo "Error: Se guardo en local pero fallo en Supabase";
         }

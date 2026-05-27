@@ -11,7 +11,7 @@ $SUPA_HOST = 'aws-1-us-east-2.pooler.supabase.com';
 $SUPA_DBNAME = 'postgres';
 $SUPA_USERNAME = 'postgres.dwoomuuyqnfmfhvskhum';
 $SUPA_PASSWORD = 'unicesmag@@';
-$SUPA_PORT = '6543';
+$SUPA_PORT = '5432';
 
 $local_data_connection = "
     host=$LOCAL_HOST
@@ -37,7 +37,7 @@ if(!$local_conn){
     echo "Local success connection !!!";
 }
 //Supabase connection
-/* 
+
 $supa_conn = pg_connect($supa_data_connection);
 if(!$supa_conn){
     echo "<br>Error: Unable to connect to database";
@@ -45,7 +45,7 @@ if(!$supa_conn){
 }else{
     echo "<br>Local success connection !!!";
 }
-*/
+
 ?>
 
 
